@@ -189,7 +189,7 @@ spec:
       {{- if .Values.mancenter.priorityClassName }}
       priorityClassName: "{{ .Values.mancenter.priorityClassName }}"
       {{- end }}
-      serviceAccountName: {{ template "hazelcast.serviceAccountName" . }}
+      serviceAccountName: {{ template "hazelcast.serviceAccountName" . }}-mancenter
       automountServiceAccountToken: {{ .Values.serviceAccount.automountToken }}
       volumes:
       - name: config
